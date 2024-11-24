@@ -16,10 +16,10 @@ namespace Circle
         public fMain()
         {
             InitializeComponent();
-            circles = new CCircle[100];
+            circles = new CEmblem[100];
         }
 
-        CCircle[] circles;
+        CEmblem[] circles;
         int CircleCount = 0;
         int CurrentCircleIndex;
 
@@ -99,7 +99,7 @@ namespace Circle
             }
             Graphics graphics = pnMain.CreateGraphics();
             CurrentCircleIndex = CircleCount;
-            circles[CurrentCircleIndex] = new CCircle(graphics, pnMain.Width / 2, pnMain.Height / 2, 50);
+            circles[CurrentCircleIndex] = new CEmblem(graphics, pnMain.Width / 2, pnMain.Height / 2, 50);
             circles[CurrentCircleIndex].Show();
             CircleCount++;
             cbCircles.Items.Add("Коло № " + (CircleCount - 1).ToString());
